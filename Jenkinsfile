@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Run') {
+    stage('Build') {
       steps {
-        sh 'java -jar -Dserver.port=4000 target/*.jar'
+        sh 'mvn package'
       }
     }
 
