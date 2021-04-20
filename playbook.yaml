@@ -1,0 +1,6 @@
+- hosts: webserver
+  tasks:
+        - name: Deploy/copy spring-petclinic-2.4.2.jar to webserver.
+          copy: 
+            src: /var/lib/jenkins/workspace/spring-petclinic_main/target/spring-petclinic-2.4.2.jar
+            dest: /home/vagrant/spring-petclinic-2.4.2.jar
