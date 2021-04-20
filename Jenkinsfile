@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        ansiblePlaybook(playbook: 'playbook.yaml', inventory: 'inventory.inv')
+      }
+    }
+
   }
 }
